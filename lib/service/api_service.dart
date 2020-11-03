@@ -29,7 +29,7 @@ class ApiService implements Repository {
   Future<ListLeagues> getListLeagues() async {
     try {
       response = await dio.get(
-        'leagues/eng.1',
+        'leagues',
       );
 
       return ListLeagues.fromJson(

@@ -17,12 +17,19 @@ class ListLeagues {
   factory ListLeagues.fromJson(Map<String, dynamic> json) => ListLeagues(
         status: json["status"],
         data: List<ListLeaguesItem>.from(
-            json["data"].map((x) => ListLeaguesItem.fromJson(x))),
+          json["data"].map(
+            (x) => ListLeaguesItem.fromJson(x),
+          ),
+        ),
       );
 
   Map<String, dynamic> toJson() => {
         "status": status,
-        "data": List<dynamic>.from(data.map((x) => x.toJson())),
+        "data": List<dynamic>.from(
+          data.map(
+            (x) => x.toJson(),
+          ),
+        ),
       };
 }
 
