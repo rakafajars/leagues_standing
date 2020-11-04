@@ -68,23 +68,38 @@ class _MyHomePageState extends State<MyHomePage> {
                     crossAxisCount: 2,
                   ),
                   itemBuilder: (BuildContext context, int index) {
-                    return Card(
-                      elevation: 1.5,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        mainAxisSize: MainAxisSize.min,
-                        verticalDirection: VerticalDirection.down,
-                        children: [
-                          CachedNetworkImage(
-                            imageUrl: state.listLeagues.data[index].logos.light,
-                            placeholder: (context, url) =>
-                                CircularProgressIndicator(),
-                            errorWidget: (context, url, error) => ErrorImage(),
-                            height: 130,
-                            width: 100,
+                    return GestureDetector(
+                      onTap: () {
+                        print(
+                          state.listLeagues.data[index].id,
+                        );
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => InitialDetailLeagues(
+                              idLeagues: state.listLeagues.data[index].id,
+                            ),
                           ),
-                        ],
+                        );
+                      },
+                      child: Card(
+                        elevation: 1.5,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          mainAxisSize: MainAxisSize.min,
+                          verticalDirection: VerticalDirection.down,
+                          children: [
+                            CachedNetworkImage(
+                              imageUrl:
+                                  state.listLeagues.data[index].logos.light,
+                              errorWidget: (context, url, error) =>
+                                  ErrorImage(),
+                              height: 130,
+                              width: 100,
+                            ),
+                          ],
+                        ),
                       ),
                     );
                   },

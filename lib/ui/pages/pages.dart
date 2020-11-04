@@ -9,3 +9,4 @@ import 'package:shimmer/shimmer.dart';
 
 part 'home/home.dart';
 part 'home/initial_home.dart';
+part 'detail_leagues/detail_leagues.dart';
