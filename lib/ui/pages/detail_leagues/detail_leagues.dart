@@ -71,8 +71,27 @@ class _DetailLeaguesState extends State<DetailLeagues> {
         child: BlocBuilder<DetailLeaguesBloc, DetailLeaguesState>(
           builder: (context, state) {
             if (state is DetailLeaguesLoadInProgress) {
-              return Center(
-                child: Text('Loading..'),
+              return Container(
+                margin: EdgeInsets.all(24),
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 3,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 180,
+                      width: 200,
+                      child: Shimmer.fromColors(
+                        baseColor: Colors.grey[400],
+                        highlightColor: Colors.white,
+                        child: Card(
+                          elevation: 1.5,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               );
             }
             if (state is DetailLeaguesLoadSuccess) {
