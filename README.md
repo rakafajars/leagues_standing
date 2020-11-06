@@ -6,4 +6,4 @@
 
 ## Detail Leagues
 
-![Detail Leagues](https://user-images.githubusercontent.com/73903697/98057778-b44ec480-1e75-11eb-9771-b203149705b0.png)
+![Detail Leagues](https://user-images.githubusercontent.com/73903697/98395294-9dcf8580-208e-11eb-973e-b1c7a887e500.png)
