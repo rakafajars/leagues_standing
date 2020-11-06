@@ -52,4 +52,17 @@ class ApiService implements Repository {
       throw _showException(error, stacktrace);
     }
   }
+
+  @override
+  Future<SeasonsLeagues> getSeasonLeagues({String idLeagues}) async {
+    try {
+      response = await dio.get(
+        'leagues/$idLeagues/seasons',
+      );
+
+      return SeasonsLeagues.fromJson(response.data);
+    } catch (error, stacktrace) {
+      throw _showException(error, stacktrace);
+    }
+  }
 }

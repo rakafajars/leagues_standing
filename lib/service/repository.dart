@@ -6,4 +6,8 @@ abstract class Repository {
   Future<DetailLeagues> getDetailLeagues({
     String idLeagues,
   });
+
+  Future<SeasonsLeagues> getSeasonLeagues({
+    String idLeagues,
+  });
 }

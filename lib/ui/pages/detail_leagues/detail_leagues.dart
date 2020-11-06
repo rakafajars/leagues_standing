@@ -38,6 +38,8 @@ class DetailLeagues extends StatefulWidget {
 }
 
 class _DetailLeaguesState extends State<DetailLeagues> {
+  String seasons;
+
   // Refresh
   Completer<void> _refreshCompleter;
 
@@ -134,6 +136,9 @@ class _DetailLeaguesState extends State<DetailLeagues> {
                           ),
                         ],
                       ),
+                    ),
+                    InitialDropDownSeasonsLeagus(
+                      idLeagues: state.detailLeagues.data.id,
                     ),
                   ],
                 ),
