@@ -65,4 +65,21 @@ class ApiService implements Repository {
       throw _showException(error, stacktrace);
     }
   }
+
+  @override
+  Future<LeaguesStanding> getLeaguesStanding({
+    String idLeagues,
+    String season,
+    String sort,
+  }) async {
+    try {
+      response = await dio.get(
+        'leagues/$idLeagues/standings?season=$season&sort=$sort',
+      );
+
+      return LeaguesStanding.fromJson(response.data);
+    } catch (error, stacktrace) {
+      throw _showException(error, stacktrace);
+    }
+  }
 }

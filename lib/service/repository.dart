@@ -10,4 +10,10 @@ abstract class Repository {
   Future<SeasonsLeagues> getSeasonLeagues({
     String idLeagues,
   });
+
+  Future<LeaguesStanding> getLeaguesStanding({
+    String idLeagues,
+    String season,
+    String sort,
+  });
 }

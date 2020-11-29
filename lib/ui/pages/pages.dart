@@ -11,4 +11,3 @@ import 'package:shimmer/shimmer.dart';
 part 'home/home.dart';
 part 'home/initial_home.dart';
 part 'detail_leagues/detail_leagues.dart';
-part 'season_leagues/drop_season.dart';
